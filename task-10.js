@@ -5,11 +5,9 @@ console.table(users);
 // // должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 const getSortedUniqueSkills = users => {
-  return users
-  .reduce((acc, item) => {
+  return users.reduce((acc, item) => {
     acc.push(...item.skills);
-    return acc.sort() &&
-    [...new Set(acc)];
+    return acc.sort() && [...new Set(acc)];
   }, []);
 };
 console.table(getSortedUniqueSkills(users));
