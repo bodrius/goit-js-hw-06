@@ -8,8 +8,8 @@ const getSortedUniqueSkills = users => {
   return users
   .reduce((acc, item) => {
     acc.push(...item.skills);
-    return acc.sort()
-    
+    return acc.sort() &&
+    [...new Set(acc)];
   }, []);
 };
 console.table(getSortedUniqueSkills(users));
