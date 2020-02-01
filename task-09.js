@@ -5,9 +5,9 @@ console.table(users);
 // количества их друзей (поле friends)
 
 const getNamesSortedByFriendsCount = users => {
-  const sortUsersOfFriends = (userA, userB) =>
-    userA["friends"].length - userB["friends"].length;
-  return users.sort(sortUsersOfFriends).map(user => user.name);
+  return [...users]
+    .sort((userA, userB) => userA["friends"].length - userB["friends"].length)
+    .map(user => user.name);
 };
 
 console.table(getNamesSortedByFriendsCount(users));
