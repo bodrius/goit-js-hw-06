@@ -7,4 +7,4 @@ const calculateTotalBalance = users => {
   return users.reduce((totalBalance, users) => totalBalance + users.balance, 0);
 };
 
-console.log(calculateTotalBalance(users)); // 20916
+console.table(calculateTotalBalance(users)); // 20916
